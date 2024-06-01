@@ -1,5 +1,8 @@
-message = input("Enter title: ")
+todos = []
 
-print(f'the title length is: {len(message)}')
+while 2 > 1:
+    todo = input("Enter the task: ")
+    todos.append(todo)
+    print(todos)
 
 
