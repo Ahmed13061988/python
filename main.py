@@ -1,7 +1,7 @@
 todos = []
 
 while True:
-    users_input = input("Type add, show, edit or exit: ").strip().lower()
+    users_input = input("Type add, show, edit, completed exit: ").strip().lower()
     match users_input:
         case "add":
             todo = input("Enter the todo: ")
@@ -14,6 +14,10 @@ while True:
             editable = todos[number]
             new_value = input("Edit it: ")
             todos[number] = new_value.capitalize()
+        case "completed":
+            item = input("What number is done?: ").capitalize()
+            todos.remove(item)
+            print(f"You're done with {item}")
         case "exit":
             print("Bye!")
             break
