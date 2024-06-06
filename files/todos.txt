@@ -2,6 +2,6 @@ Clean
 Cook
 Clean
 Cook
-Eat
-Shower
+HelloShower
 Go out
+Sleeeeeeep
