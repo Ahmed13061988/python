@@ -6,8 +6,10 @@ while True:
             file = open("todos.txt", "r")
             todos = file.readlines()
             todos.append(todo.capitalize())
+            file.close()
             file = open("todos.txt", 'w')
             file.writelines(todos)
+            file.close()
         case "show" | "display":
             file = open("todos.txt", "r")
             todos = file.readlines()
@@ -17,6 +19,7 @@ while True:
             number = int(input("Number of todo to edit?: ")) - 1
             file = open("todos.txt", "r")
             todos = file.readlines()
+            file.close()
             editable = todos[number]
             new_value = input("Edit it: ")
             todos[number] = new_value.capitalize()
@@ -24,6 +27,7 @@ while True:
             item = int(input("What number is done?: "))
             file = open("todos.txt", "r")
             todos = file.readlines()
+            file.close()
             todos.pop(item-1)
             print(f"You're done with {item}")
         case "exit":
