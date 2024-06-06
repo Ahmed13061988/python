@@ -1,0 +1,7 @@
+Clean
+Cook
+Clean
+Cook
+Eat
+Shower
+Go out
