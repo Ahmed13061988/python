@@ -1,14 +1,8 @@
-contents = ["This is first file", "This is second file", "This is third file"]
+date = input("Enter today's date: ")
+rate = input("How do you rate your day from 1-10? ")
 
-files = ["first.txt", "second.txt", "third.txt"]
+thoughts = input("Let your thoughts flow: ")
 
-# for i in range(len(files)):
-#     file = open(f"files/{files[i]}", "w")
-#     file.write(content[i])
-
-
-# Another way to do the same using zip()
-
-for file, content in zip(files, contents):
-    file = open(f"files/{file}", "w")
-    file.writelines(content)
+with open(f"{date}.txt", "w") as file:
+    file.write(thoughts + "\n")
+    file.write(rate)

@@ -2,6 +2,5 @@ Clean
 Cook
 Clean
 Cook
-HelloShower
-Go out
-Sleep
+Study
+Play video games
