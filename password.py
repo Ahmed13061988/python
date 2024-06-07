@@ -1,13 +1,6 @@
-# password = "ahmed!"
-#
-# user_input = ""
-#
-# while password != user_input:
-#     user_input = input("Enter the password: ")
-
-
-
-while True:
-    name = input("Enter your name: ")
-    print(name.capitalize())
-
+prompt = input("Enter a new member: ")
+file = open("/users/ahmedhussein/downloads/members.txt", "r")
+members = file.readlines()
+members.append(prompt)
+file = open("/Users/ahmedhussein/Downloads/members.txt", "w")
+members = file.writelines(members)

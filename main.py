@@ -13,7 +13,8 @@ while True:
         case "show" | "display":
             file = open("files/todos.txt", "r")
             todos = file.readlines()
-            for index, i in enumerate(todos):
+            new_todos = [item.strip("\n") for item in todos]
+            for index, i in enumerate(new_todos):
                 print(f"{index + 1}-{i}")
         case "edit":
             number = int(input("Number of todo to edit?: ")) - 1

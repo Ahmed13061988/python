@@ -4,4 +4,4 @@ Clean
 Cook
 HelloShower
 Go out
-Sleeeeeeep
+Sleep
