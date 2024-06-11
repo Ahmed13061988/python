@@ -4,3 +4,4 @@ Clean
 Cook
 Rest
 Eat
+Prepare pizza
