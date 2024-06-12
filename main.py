@@ -16,7 +16,7 @@ while True:
         todo = users_input.replace("add ", "")
         todos = get_todos("files/todos.txt")
         todos.append(todo.capitalize() + "\n")
-        write_todos("files/todos", todos)
+        write_todos("files/todos.txt", todos)
 
     elif users_input.startswith("show"):
         todos = get_todos("files/todos.txt")
@@ -31,7 +31,7 @@ while True:
             todos = get_todos("files/todos.txt")
             new_value = input("Edit it: ") + '\n'
             todos[number] = new_value.capitalize()
-            write_todos("files/todos", todos)
+            write_todos("files/todos.txt", todos)
         except ValueError:
             print("Your command is not valid!")
             continue
@@ -41,7 +41,7 @@ while True:
             item = item - 1
             todos = get_todos("files/todos.txt")
             todos.pop(item)
-            write_todos("files/todos", todos)
+            write_todos("files/todos.txt", todos)
             print(f"You're done with {item + 1}")
         except (ValueError, IndexError):
             print("Your command is not valid")
