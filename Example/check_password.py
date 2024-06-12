@@ -1,14 +1,14 @@
-password = input("Enter the password: ")
-
-x = False
-if len(password) >= 8:
+def strength(password):
+    digit = False
+    upper = False
     for i in password:
-        if i.isdigit():
-            for j in password:
-                if j.isupper():
-                    x = True
-    if x:
+        if i.isupper():
+            upper = True
+        elif i.isdigit():
+            digit = True
+    if digit and upper and len(password) >= 8:
         print("Strong password")
+    else:print("Weak password")
 
-else:
-    print("Weak password")
+
+strength("Ahmeal1ihuss")
