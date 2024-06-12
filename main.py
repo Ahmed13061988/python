@@ -1,5 +1,5 @@
-def get_todos():
-    with open("files/todos.txt", "r") as file_local:
+def get_todos(filepath):
+    with open(filepath, "r") as file_local:
         todos_local = file_local.readlines()
     return todos_local
 while True:
@@ -7,13 +7,13 @@ while True:
 
     if users_input.startswith("add"):
         todo = users_input.replace("add ", "")
-        todos = get_todos()
+        todos = get_todos("files/todos.txt")
         todos.append(todo.capitalize() + "\n")
         with open("files/todos.txt", 'w') as file:
             file.writelines(todos)
 
     elif users_input.startswith("show"):
-        todos = get_todos()
+        todos = get_todos("files/todos.txt")
         new_todos = [item.strip("\n") for item in todos]
         for index, i in enumerate(new_todos):
             print(f"{index + 1}-{i}")
@@ -22,7 +22,7 @@ while True:
         try:
             number = users_input[5:]
             number = int(number) - 1
-            todos = get_todos()
+            todos = get_todos("files/todos.txt")
             new_value = input("Edit it: ") + '\n'
             todos[number] = new_value.capitalize()
             with open("files/todos.txt", 'w') as file:
@@ -34,7 +34,7 @@ while True:
         try:
             item = int(users_input[8:])
             item = item - 1
-            todos = get_todos()
+            todos = get_todos("files/todos.txt")
             todos.pop(item)
             with open("files/todos.txt", "w") as file:
                 file.writelines(todos)
