@@ -3,5 +3,5 @@ Cook
 Clean
 Cook
 Rest
-Eat
-Prepare pizza
+Khavat
+Learn aws
