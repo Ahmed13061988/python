@@ -8,7 +8,8 @@ def strength(password):
             digit = True
     if digit and upper and len(password) >= 8:
         print("Strong password")
-    else:print("Weak password")
+    else:
+        print("Weak password")
 
 
 strength("Ahmeal1ihuss")
