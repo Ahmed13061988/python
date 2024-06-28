@@ -1,4 +1,4 @@
-from functions import get_todos, write_todos
+# from functions import get_todos, write_todos
 import functions
 
 
@@ -7,12 +7,12 @@ while True:
 
     if users_input.startswith("add"):
         todo = users_input.replace("add ", "")
-        todos = get_todos()
+        todos = functions.get_todos()
         todos.append(todo.capitalize() + "\n")
-        write_todos(todos)
+        functions.write_todos(todos)
 
     elif users_input.startswith("show"):
-        todos = get_todos()
+        todos = functions.get_todos()
         new_todos = [item.strip("\n") for item in todos]
         for index, i in enumerate(new_todos):
             print(f"{index + 1}-{i}")
@@ -21,10 +21,10 @@ while True:
         try:
             number = users_input[5:]
             number = int(number) - 1
-            todos = get_todos()
+            todos = functions.get_todos()
             new_value = input("Edit it: ") + '\n'
             todos[number] = new_value.capitalize()
-            write_todos(todos)
+            functions.write_todos(todos)
         except ValueError:
             print("Your command is not valid!")
             continue
@@ -32,9 +32,9 @@ while True:
         try:
             item = int(users_input[8:])
             item = item - 1
-            todos = get_todos()
+            todos = functions.get_todos()
             todos.pop(item)
-            write_todos(todos)
+            functions.write_todos(todos)
             print(f"You're done with {item + 1}")
         except (ValueError, IndexError):
             print("Your command is not valid")
