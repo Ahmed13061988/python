@@ -7,3 +7,4 @@ Learn aws
 Treat the baby
 Clean
 Keep study
+Learn more python
