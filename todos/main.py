@@ -2,9 +2,9 @@
 import functions
 import time
 
-
+current_time = time.strftime("%D %H:%M:%S")
+print(f"It is {current_time}")
 while True:
-    print(time.strftime("%Y:%M"))
     users_input = input("Type add, show, edit, complete or exit: ").strip().lower()
 
     if users_input.startswith("add"):
