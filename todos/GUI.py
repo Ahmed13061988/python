@@ -32,6 +32,8 @@ while True:
                 todo_list.remove(values["todos"][0])
             functions.write_todos(todo_list)
             window["todos"].update(values=todo_list)
+        case "todos":
+            window["todo"].update(value=values["todos"][0])
         case "Close":
             window.close()
         case fs.WIN_CLOSED:
