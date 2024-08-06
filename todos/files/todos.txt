@@ -1,6 +1,7 @@
 Love and laugh
 Eat banana
 Keep study
+
 Be python pro
 Study hard
 Write a code for GUI

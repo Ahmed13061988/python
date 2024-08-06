@@ -1,5 +1,10 @@
 import FreeSimpleGUI as fs
 import functions
+import os
+
+if not os.path.exists("todos.txt"):
+    with open("todos.txt", "w") as file:
+        pass
 
 label = fs.Text("Type a to-do")
 input_box = fs.InputText(tooltip="Enter todo", key="todo")
@@ -38,6 +43,5 @@ while True:
             window.close()
         case fs.WIN_CLOSED:
             break
-print(todo_list)
 
 window.close()
